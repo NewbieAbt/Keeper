@@ -107,7 +107,6 @@ function Home() {
         />
         );
       })):(<p style={msgStyle}>No Notes To Show</p>)}
-      <Footer />
     </div>
   );
 }
