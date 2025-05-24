@@ -14,7 +14,7 @@ export default function EditForm() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/noteDetails/${id}`)
+            .get(`https://keeperapp-47lk.onrender.com/noteDetails/${id}`)
             .then((res) => {
                 setNote(res.data.content);
             })
@@ -32,7 +32,7 @@ export default function EditForm() {
     const submitHandler = (event) => {
         event.preventDefault();
         axios
-            .patch(`http://localhost:5000/updateNote/${id}`, note)
+            .patch(`https://keeperapp-47lk.onrender.com/updateNote/${id}`, note)
             .then(() => {
                 navigate(`/`);
                 Swal.fire('Your note has been updated successfully!')
