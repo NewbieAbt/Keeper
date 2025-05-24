@@ -1,0 +1,20 @@
+{
+  "name": "keeper-app-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "note taking app",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run",
+    "start": "node server.js",
+    "build": "npm install"
+  },
+  "author": "ABT",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.2"
+  }
+}
