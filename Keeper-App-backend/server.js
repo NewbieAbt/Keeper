@@ -12,13 +12,10 @@ const __dirname = path.resolve();
 //console.log("this is the dir ",__dirname);
 app.use(express.json()); // JSON Parser
 app.use(express.urlencoded({ extended: true })); // URL Body Parser
-
-app.use(
-  cors({
-    origin: "*",
-    // credentials: true,
-  })
-);
+app.use(cors());
+app.use(cors({
+    origin: "https://keeper-app-frontend-gn6f.onrender.com",
+  }));
 
 
 app.use(router);
