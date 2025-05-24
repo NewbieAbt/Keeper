@@ -28,7 +28,7 @@ function Home() {
   useEffect(() => {
         const fetchNotes = () => {
             axios
-                .get("http://localhost:5000/allNotes")
+                .get("https://keeperapp-47lk.onrender.com/allNotes")
                 .then((res) => {
                     if (res.data.content) {
                         setNotes(res.data.content);
@@ -61,11 +61,11 @@ function Home() {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios
-                    .delete(`http://localhost:5000/deleteNote/${id}`)
+                    .delete(`https://keeperapp-47lk.onrender.com/deleteNote/${id}`)
                     .then(() => {
                         const fetchNotes = () => {
             axios
-                .get("http://localhost:5000/allNotes")
+                .get("https://keeperapp-47lk.onrender.com/allNotes")
                 .then((res) => {
                     if (res.data.content) {
                         setNotes(res.data.content);
