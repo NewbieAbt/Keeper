@@ -27,11 +27,11 @@ function CreateArea(){
     const submitNote = (event) => {
       event.preventDefault();
       axios
-        .post(`http://localhost:5000/addNote`, note)
+        .post(`https://keeperapp-47lk.onrender.com/addNote`, note)
         .then(() => {
           const fetchNotes = () => {
             axios
-                .get("http://localhost:5000/allNotes")
+                .get("https://keeperapp-47lk.onrender.com/allNotes")
                 .then((res) => {
                     if (res.data.content) {
                         setNotes(res.data.content);
